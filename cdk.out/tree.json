@@ -1,0 +1,245 @@
+{
+  "version": "tree-0.1",
+  "tree": {
+    "id": "App",
+    "path": "",
+    "children": [
+      {
+        "id": "Tree",
+        "path": "Tree"
+      },
+      {
+        "id": "cdk-cromwell",
+        "path": "cdk-cromwell",
+        "children": [
+          {
+            "id": "cromwell_server_vpc",
+            "path": "cdk-cromwell/cromwell_server_vpc",
+            "children": [
+              {
+                "id": "Resource",
+                "path": "cdk-cromwell/cromwell_server_vpc/Resource"
+              },
+              {
+                "id": "PublicSubnet1",
+                "path": "cdk-cromwell/cromwell_server_vpc/PublicSubnet1",
+                "children": [
+                  {
+                    "id": "Subnet",
+                    "path": "cdk-cromwell/cromwell_server_vpc/PublicSubnet1/Subnet"
+                  },
+                  {
+                    "id": "Acl",
+                    "path": "cdk-cromwell/cromwell_server_vpc/PublicSubnet1/Acl"
+                  },
+                  {
+                    "id": "RouteTable",
+                    "path": "cdk-cromwell/cromwell_server_vpc/PublicSubnet1/RouteTable"
+                  },
+                  {
+                    "id": "RouteTableAssociation",
+                    "path": "cdk-cromwell/cromwell_server_vpc/PublicSubnet1/RouteTableAssociation"
+                  },
+                  {
+                    "id": "DefaultRoute",
+                    "path": "cdk-cromwell/cromwell_server_vpc/PublicSubnet1/DefaultRoute"
+                  },
+                  {
+                    "id": "EIP",
+                    "path": "cdk-cromwell/cromwell_server_vpc/PublicSubnet1/EIP"
+                  },
+                  {
+                    "id": "NATGateway",
+                    "path": "cdk-cromwell/cromwell_server_vpc/PublicSubnet1/NATGateway"
+                  }
+                ]
+              },
+              {
+                "id": "PublicSubnet2",
+                "path": "cdk-cromwell/cromwell_server_vpc/PublicSubnet2",
+                "children": [
+                  {
+                    "id": "Subnet",
+                    "path": "cdk-cromwell/cromwell_server_vpc/PublicSubnet2/Subnet"
+                  },
+                  {
+                    "id": "Acl",
+                    "path": "cdk-cromwell/cromwell_server_vpc/PublicSubnet2/Acl"
+                  },
+                  {
+                    "id": "RouteTable",
+                    "path": "cdk-cromwell/cromwell_server_vpc/PublicSubnet2/RouteTable"
+                  },
+                  {
+                    "id": "RouteTableAssociation",
+                    "path": "cdk-cromwell/cromwell_server_vpc/PublicSubnet2/RouteTableAssociation"
+                  },
+                  {
+                    "id": "DefaultRoute",
+                    "path": "cdk-cromwell/cromwell_server_vpc/PublicSubnet2/DefaultRoute"
+                  },
+                  {
+                    "id": "EIP",
+                    "path": "cdk-cromwell/cromwell_server_vpc/PublicSubnet2/EIP"
+                  },
+                  {
+                    "id": "NATGateway",
+                    "path": "cdk-cromwell/cromwell_server_vpc/PublicSubnet2/NATGateway"
+                  }
+                ]
+              },
+              {
+                "id": "PrivateSubnet1",
+                "path": "cdk-cromwell/cromwell_server_vpc/PrivateSubnet1",
+                "children": [
+                  {
+                    "id": "Subnet",
+                    "path": "cdk-cromwell/cromwell_server_vpc/PrivateSubnet1/Subnet"
+                  },
+                  {
+                    "id": "Acl",
+                    "path": "cdk-cromwell/cromwell_server_vpc/PrivateSubnet1/Acl"
+                  },
+                  {
+                    "id": "RouteTable",
+                    "path": "cdk-cromwell/cromwell_server_vpc/PrivateSubnet1/RouteTable"
+                  },
+                  {
+                    "id": "RouteTableAssociation",
+                    "path": "cdk-cromwell/cromwell_server_vpc/PrivateSubnet1/RouteTableAssociation"
+                  },
+                  {
+                    "id": "DefaultRoute",
+                    "path": "cdk-cromwell/cromwell_server_vpc/PrivateSubnet1/DefaultRoute"
+                  }
+                ]
+              },
+              {
+                "id": "PrivateSubnet2",
+                "path": "cdk-cromwell/cromwell_server_vpc/PrivateSubnet2",
+                "children": [
+                  {
+                    "id": "Subnet",
+                    "path": "cdk-cromwell/cromwell_server_vpc/PrivateSubnet2/Subnet"
+                  },
+                  {
+                    "id": "Acl",
+                    "path": "cdk-cromwell/cromwell_server_vpc/PrivateSubnet2/Acl"
+                  },
+                  {
+                    "id": "RouteTable",
+                    "path": "cdk-cromwell/cromwell_server_vpc/PrivateSubnet2/RouteTable"
+                  },
+                  {
+                    "id": "RouteTableAssociation",
+                    "path": "cdk-cromwell/cromwell_server_vpc/PrivateSubnet2/RouteTableAssociation"
+                  },
+                  {
+                    "id": "DefaultRoute",
+                    "path": "cdk-cromwell/cromwell_server_vpc/PrivateSubnet2/DefaultRoute"
+                  }
+                ]
+              },
+              {
+                "id": "IGW",
+                "path": "cdk-cromwell/cromwell_server_vpc/IGW"
+              },
+              {
+                "id": "VPCGW",
+                "path": "cdk-cromwell/cromwell_server_vpc/VPCGW"
+              }
+            ]
+          },
+          {
+            "id": "cromwell_cluster",
+            "path": "cdk-cromwell/cromwell_cluster",
+            "children": [
+              {
+                "id": "Resource",
+                "path": "cdk-cromwell/cromwell_cluster/Resource"
+              }
+            ]
+          },
+          {
+            "id": "ecstaskexecutionrole",
+            "path": "cdk-cromwell/ecstaskexecutionrole",
+            "children": [
+              {
+                "id": "Policy",
+                "path": "cdk-cromwell/ecstaskexecutionrole/Policy",
+                "children": [
+                  {
+                    "id": "Resource",
+                    "path": "cdk-cromwell/ecstaskexecutionrole/Policy/Resource"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "batchservicerole",
+            "path": "cdk-cromwell/batchservicerole"
+          },
+          {
+            "id": "fargate_cromwell_role",
+            "path": "cdk-cromwell/fargate_cromwell_role"
+          },
+          {
+            "id": "cromwell_docker_image",
+            "path": "cdk-cromwell/cromwell_docker_image"
+          },
+          {
+            "id": "cromwell_server_task",
+            "path": "cdk-cromwell/cromwell_server_task",
+            "children": [
+              {
+                "id": "Resource",
+                "path": "cdk-cromwell/cromwell_server_task/Resource"
+              }
+            ]
+          },
+          {
+            "id": "cromwell_container",
+            "path": "cdk-cromwell/cromwell_container",
+            "children": [
+              {
+                "id": "LogGroup",
+                "path": "cdk-cromwell/cromwell_container/LogGroup",
+                "children": [
+                  {
+                    "id": "Resource",
+                    "path": "cdk-cromwell/cromwell_container/LogGroup/Resource"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cromwell_server_security_group",
+            "path": "cdk-cromwell/cromwell_server_security_group",
+            "children": [
+              {
+                "id": "Resource",
+                "path": "cdk-cromwell/cromwell_server_security_group/Resource"
+              }
+            ]
+          },
+          {
+            "id": "cromwell_service",
+            "path": "cdk-cromwell/cromwell_service",
+            "children": [
+              {
+                "id": "Service",
+                "path": "cdk-cromwell/cromwell_service/Service"
+              }
+            ]
+          },
+          {
+            "id": "FargateCromwellServiceArn",
+            "path": "cdk-cromwell/FargateCromwellServiceArn"
+          }
+        ]
+      }
+    ]
+  }
+}

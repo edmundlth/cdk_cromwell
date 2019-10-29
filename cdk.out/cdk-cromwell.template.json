@@ -1,0 +1,721 @@
+{
+  "Resources": {
+    "cromwellservervpcD95E1B08": {
+      "Type": "AWS::EC2::VPC",
+      "Properties": {
+        "CidrBlock": "10.0.0.0/16",
+        "EnableDnsHostnames": true,
+        "EnableDnsSupport": true,
+        "InstanceTenancy": "default",
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "cdk-cromwell/cromwell_server_vpc"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "cdk-cromwell/cromwell_server_vpc/Resource"
+      }
+    },
+    "cromwellservervpcPublicSubnet1SubnetB5F44586": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "CidrBlock": "10.0.0.0/18",
+        "VpcId": {
+          "Ref": "cromwellservervpcD95E1B08"
+        },
+        "AvailabilityZone": {
+          "Fn::Select": [
+            0,
+            {
+              "Fn::GetAZs": ""
+            }
+          ]
+        },
+        "MapPublicIpOnLaunch": true,
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "cdk-cromwell/cromwell_server_vpc/PublicSubnet1"
+          },
+          {
+            "Key": "aws-cdk:subnet-name",
+            "Value": "Public"
+          },
+          {
+            "Key": "aws-cdk:subnet-type",
+            "Value": "Public"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "cdk-cromwell/cromwell_server_vpc/PublicSubnet1/Subnet"
+      }
+    },
+    "cromwellservervpcPublicSubnet1RouteTable07BAC3C6": {
+      "Type": "AWS::EC2::RouteTable",
+      "Properties": {
+        "VpcId": {
+          "Ref": "cromwellservervpcD95E1B08"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "cdk-cromwell/cromwell_server_vpc/PublicSubnet1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "cdk-cromwell/cromwell_server_vpc/PublicSubnet1/RouteTable"
+      }
+    },
+    "cromwellservervpcPublicSubnet1RouteTableAssociation32D10C84": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "cromwellservervpcPublicSubnet1RouteTable07BAC3C6"
+        },
+        "SubnetId": {
+          "Ref": "cromwellservervpcPublicSubnet1SubnetB5F44586"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "cdk-cromwell/cromwell_server_vpc/PublicSubnet1/RouteTableAssociation"
+      }
+    },
+    "cromwellservervpcPublicSubnet1DefaultRoute3CAA7A68": {
+      "Type": "AWS::EC2::Route",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "cromwellservervpcPublicSubnet1RouteTable07BAC3C6"
+        },
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "GatewayId": {
+          "Ref": "cromwellservervpcIGWEA8D5F35"
+        }
+      },
+      "DependsOn": [
+        "cromwellservervpcVPCGWE2F50815"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "cdk-cromwell/cromwell_server_vpc/PublicSubnet1/DefaultRoute"
+      }
+    },
+    "cromwellservervpcPublicSubnet1EIP77E570A1": {
+      "Type": "AWS::EC2::EIP",
+      "Properties": {
+        "Domain": "vpc"
+      },
+      "Metadata": {
+        "aws:cdk:path": "cdk-cromwell/cromwell_server_vpc/PublicSubnet1/EIP"
+      }
+    },
+    "cromwellservervpcPublicSubnet1NATGateway7AB64563": {
+      "Type": "AWS::EC2::NatGateway",
+      "Properties": {
+        "AllocationId": {
+          "Fn::GetAtt": [
+            "cromwellservervpcPublicSubnet1EIP77E570A1",
+            "AllocationId"
+          ]
+        },
+        "SubnetId": {
+          "Ref": "cromwellservervpcPublicSubnet1SubnetB5F44586"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "cdk-cromwell/cromwell_server_vpc/PublicSubnet1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "cdk-cromwell/cromwell_server_vpc/PublicSubnet1/NATGateway"
+      }
+    },
+    "cromwellservervpcPublicSubnet2Subnet1754E9FE": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "CidrBlock": "10.0.64.0/18",
+        "VpcId": {
+          "Ref": "cromwellservervpcD95E1B08"
+        },
+        "AvailabilityZone": {
+          "Fn::Select": [
+            1,
+            {
+              "Fn::GetAZs": ""
+            }
+          ]
+        },
+        "MapPublicIpOnLaunch": true,
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "cdk-cromwell/cromwell_server_vpc/PublicSubnet2"
+          },
+          {
+            "Key": "aws-cdk:subnet-name",
+            "Value": "Public"
+          },
+          {
+            "Key": "aws-cdk:subnet-type",
+            "Value": "Public"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "cdk-cromwell/cromwell_server_vpc/PublicSubnet2/Subnet"
+      }
+    },
+    "cromwellservervpcPublicSubnet2RouteTable80838D64": {
+      "Type": "AWS::EC2::RouteTable",
+      "Properties": {
+        "VpcId": {
+          "Ref": "cromwellservervpcD95E1B08"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "cdk-cromwell/cromwell_server_vpc/PublicSubnet2"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "cdk-cromwell/cromwell_server_vpc/PublicSubnet2/RouteTable"
+      }
+    },
+    "cromwellservervpcPublicSubnet2RouteTableAssociationF381AC33": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "cromwellservervpcPublicSubnet2RouteTable80838D64"
+        },
+        "SubnetId": {
+          "Ref": "cromwellservervpcPublicSubnet2Subnet1754E9FE"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "cdk-cromwell/cromwell_server_vpc/PublicSubnet2/RouteTableAssociation"
+      }
+    },
+    "cromwellservervpcPublicSubnet2DefaultRoute23060B8C": {
+      "Type": "AWS::EC2::Route",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "cromwellservervpcPublicSubnet2RouteTable80838D64"
+        },
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "GatewayId": {
+          "Ref": "cromwellservervpcIGWEA8D5F35"
+        }
+      },
+      "DependsOn": [
+        "cromwellservervpcVPCGWE2F50815"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "cdk-cromwell/cromwell_server_vpc/PublicSubnet2/DefaultRoute"
+      }
+    },
+    "cromwellservervpcPublicSubnet2EIP81EA90D4": {
+      "Type": "AWS::EC2::EIP",
+      "Properties": {
+        "Domain": "vpc"
+      },
+      "Metadata": {
+        "aws:cdk:path": "cdk-cromwell/cromwell_server_vpc/PublicSubnet2/EIP"
+      }
+    },
+    "cromwellservervpcPublicSubnet2NATGatewayCC02E8DA": {
+      "Type": "AWS::EC2::NatGateway",
+      "Properties": {
+        "AllocationId": {
+          "Fn::GetAtt": [
+            "cromwellservervpcPublicSubnet2EIP81EA90D4",
+            "AllocationId"
+          ]
+        },
+        "SubnetId": {
+          "Ref": "cromwellservervpcPublicSubnet2Subnet1754E9FE"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "cdk-cromwell/cromwell_server_vpc/PublicSubnet2"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "cdk-cromwell/cromwell_server_vpc/PublicSubnet2/NATGateway"
+      }
+    },
+    "cromwellservervpcPrivateSubnet1Subnet585632A1": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "CidrBlock": "10.0.128.0/18",
+        "VpcId": {
+          "Ref": "cromwellservervpcD95E1B08"
+        },
+        "AvailabilityZone": {
+          "Fn::Select": [
+            0,
+            {
+              "Fn::GetAZs": ""
+            }
+          ]
+        },
+        "MapPublicIpOnLaunch": false,
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "cdk-cromwell/cromwell_server_vpc/PrivateSubnet1"
+          },
+          {
+            "Key": "aws-cdk:subnet-name",
+            "Value": "Private"
+          },
+          {
+            "Key": "aws-cdk:subnet-type",
+            "Value": "Private"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "cdk-cromwell/cromwell_server_vpc/PrivateSubnet1/Subnet"
+      }
+    },
+    "cromwellservervpcPrivateSubnet1RouteTableB1FD8D15": {
+      "Type": "AWS::EC2::RouteTable",
+      "Properties": {
+        "VpcId": {
+          "Ref": "cromwellservervpcD95E1B08"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "cdk-cromwell/cromwell_server_vpc/PrivateSubnet1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "cdk-cromwell/cromwell_server_vpc/PrivateSubnet1/RouteTable"
+      }
+    },
+    "cromwellservervpcPrivateSubnet1RouteTableAssociation35CBD007": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "cromwellservervpcPrivateSubnet1RouteTableB1FD8D15"
+        },
+        "SubnetId": {
+          "Ref": "cromwellservervpcPrivateSubnet1Subnet585632A1"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "cdk-cromwell/cromwell_server_vpc/PrivateSubnet1/RouteTableAssociation"
+      }
+    },
+    "cromwellservervpcPrivateSubnet1DefaultRoute8F9B83C9": {
+      "Type": "AWS::EC2::Route",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "cromwellservervpcPrivateSubnet1RouteTableB1FD8D15"
+        },
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "NatGatewayId": {
+          "Ref": "cromwellservervpcPublicSubnet1NATGateway7AB64563"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "cdk-cromwell/cromwell_server_vpc/PrivateSubnet1/DefaultRoute"
+      }
+    },
+    "cromwellservervpcPrivateSubnet2SubnetC503EED4": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "CidrBlock": "10.0.192.0/18",
+        "VpcId": {
+          "Ref": "cromwellservervpcD95E1B08"
+        },
+        "AvailabilityZone": {
+          "Fn::Select": [
+            1,
+            {
+              "Fn::GetAZs": ""
+            }
+          ]
+        },
+        "MapPublicIpOnLaunch": false,
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "cdk-cromwell/cromwell_server_vpc/PrivateSubnet2"
+          },
+          {
+            "Key": "aws-cdk:subnet-name",
+            "Value": "Private"
+          },
+          {
+            "Key": "aws-cdk:subnet-type",
+            "Value": "Private"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "cdk-cromwell/cromwell_server_vpc/PrivateSubnet2/Subnet"
+      }
+    },
+    "cromwellservervpcPrivateSubnet2RouteTable3A80AF85": {
+      "Type": "AWS::EC2::RouteTable",
+      "Properties": {
+        "VpcId": {
+          "Ref": "cromwellservervpcD95E1B08"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "cdk-cromwell/cromwell_server_vpc/PrivateSubnet2"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "cdk-cromwell/cromwell_server_vpc/PrivateSubnet2/RouteTable"
+      }
+    },
+    "cromwellservervpcPrivateSubnet2RouteTableAssociation0DC4624C": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "cromwellservervpcPrivateSubnet2RouteTable3A80AF85"
+        },
+        "SubnetId": {
+          "Ref": "cromwellservervpcPrivateSubnet2SubnetC503EED4"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "cdk-cromwell/cromwell_server_vpc/PrivateSubnet2/RouteTableAssociation"
+      }
+    },
+    "cromwellservervpcPrivateSubnet2DefaultRoute1B3E3CAB": {
+      "Type": "AWS::EC2::Route",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "cromwellservervpcPrivateSubnet2RouteTable3A80AF85"
+        },
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "NatGatewayId": {
+          "Ref": "cromwellservervpcPublicSubnet2NATGatewayCC02E8DA"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "cdk-cromwell/cromwell_server_vpc/PrivateSubnet2/DefaultRoute"
+      }
+    },
+    "cromwellservervpcIGWEA8D5F35": {
+      "Type": "AWS::EC2::InternetGateway",
+      "Properties": {
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "cdk-cromwell/cromwell_server_vpc"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "cdk-cromwell/cromwell_server_vpc/IGW"
+      }
+    },
+    "cromwellservervpcVPCGWE2F50815": {
+      "Type": "AWS::EC2::VPCGatewayAttachment",
+      "Properties": {
+        "VpcId": {
+          "Ref": "cromwellservervpcD95E1B08"
+        },
+        "InternetGatewayId": {
+          "Ref": "cromwellservervpcIGWEA8D5F35"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "cdk-cromwell/cromwell_server_vpc/VPCGW"
+      }
+    },
+    "cromwellcluster7BEB3E93": {
+      "Type": "AWS::ECS::Cluster",
+      "Metadata": {
+        "aws:cdk:path": "cdk-cromwell/cromwell_cluster/Resource"
+      }
+    },
+    "ecstaskexecutionrolePolicy284E5D79": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "ecr:BatchCheckLayerAvailability",
+                "ecr:GetDownloadUrlForLayer",
+                "ecr:BatchGetImage"
+              ],
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::Join": [
+                  "",
+                  [
+                    "arn:",
+                    {
+                      "Ref": "AWS::Partition"
+                    },
+                    ":ecr:",
+                    {
+                      "Ref": "AWS::Region"
+                    },
+                    ":",
+                    {
+                      "Ref": "AWS::AccountId"
+                    },
+                    ":repository/cromwell"
+                  ]
+                ]
+              }
+            },
+            {
+              "Action": "ecr:GetAuthorizationToken",
+              "Effect": "Allow",
+              "Resource": "*"
+            },
+            {
+              "Action": [
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+              ],
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "cromwellcontainerLogGroup6DE00919",
+                  "Arn"
+                ]
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "ecstaskexecutionrolePolicy284E5D79",
+        "Roles": [
+          "ecsTaskExecutionRole"
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "cdk-cromwell/ecstaskexecutionrole/Policy/Resource"
+      }
+    },
+    "cromwellservertask70530790": {
+      "Type": "AWS::ECS::TaskDefinition",
+      "Properties": {
+        "ContainerDefinitions": [
+          {
+            "Command": [
+              "bash",
+              "run_cromwell_server.sh"
+            ],
+            "Cpu": 1,
+            "Essential": true,
+            "Image": {
+              "Fn::Join": [
+                "",
+                [
+                  {
+                    "Fn::Select": [
+                      4,
+                      {
+                        "Fn::Split": [
+                          ":",
+                          {
+                            "Fn::Join": [
+                              "",
+                              [
+                                "arn:",
+                                {
+                                  "Ref": "AWS::Partition"
+                                },
+                                ":ecr:",
+                                {
+                                  "Ref": "AWS::Region"
+                                },
+                                ":",
+                                {
+                                  "Ref": "AWS::AccountId"
+                                },
+                                ":repository/cromwell"
+                              ]
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  ".dkr.ecr.",
+                  {
+                    "Fn::Select": [
+                      3,
+                      {
+                        "Fn::Split": [
+                          ":",
+                          {
+                            "Fn::Join": [
+                              "",
+                              [
+                                "arn:",
+                                {
+                                  "Ref": "AWS::Partition"
+                                },
+                                ":ecr:",
+                                {
+                                  "Ref": "AWS::Region"
+                                },
+                                ":",
+                                {
+                                  "Ref": "AWS::AccountId"
+                                },
+                                ":repository/cromwell"
+                              ]
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  ".",
+                  {
+                    "Ref": "AWS::URLSuffix"
+                  },
+                  "/cromwell:efs"
+                ]
+              ]
+            },
+            "LogConfiguration": {
+              "LogDriver": "awslogs",
+              "Options": {
+                "awslogs-group": {
+                  "Ref": "cromwellcontainerLogGroup6DE00919"
+                },
+                "awslogs-stream-prefix": "cromwell_logs",
+                "awslogs-region": {
+                  "Ref": "AWS::Region"
+                }
+              }
+            },
+            "Name": "cromwell_container",
+            "PortMappings": [
+              {
+                "ContainerPort": 8000,
+                "HostPort": 8000,
+                "Protocol": "tcp"
+              }
+            ],
+            "WorkingDirectory": "/"
+          }
+        ],
+        "Cpu": "1024",
+        "ExecutionRoleArn": "arn:aws:iam::562965587442:role/ecsTaskExecutionRole",
+        "Family": "cdkcromwellcromwellservertaskA697552C",
+        "Memory": "4096",
+        "NetworkMode": "awsvpc",
+        "RequiresCompatibilities": [
+          "FARGATE"
+        ],
+        "TaskRoleArn": "arn:aws:iam::562965587442:role/fargate_cromwell_role"
+      },
+      "Metadata": {
+        "aws:cdk:path": "cdk-cromwell/cromwell_server_task/Resource"
+      }
+    },
+    "cromwellcontainerLogGroup6DE00919": {
+      "Type": "AWS::Logs::LogGroup",
+      "UpdateReplacePolicy": "Retain",
+      "DeletionPolicy": "Retain",
+      "Metadata": {
+        "aws:cdk:path": "cdk-cromwell/cromwell_container/LogGroup/Resource"
+      }
+    },
+    "cromwellserversecuritygroupEB12F411": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupDescription": "This is the security group assigned to the cromwell server running as a Fargate service.",
+        "GroupName": "cromwell_server_security_group",
+        "SecurityGroupEgress": [
+          {
+            "CidrIp": "0.0.0.0/0",
+            "Description": "Allow all outbound traffic by default",
+            "IpProtocol": "-1"
+          }
+        ],
+        "SecurityGroupIngress": [
+          {
+            "CidrIp": "0.0.0.0/0",
+            "Description": "from 0.0.0.0/0:cromwell_server_port",
+            "FromPort": 8000,
+            "IpProtocol": "tcp",
+            "ToPort": 8000
+          }
+        ],
+        "VpcId": {
+          "Ref": "cromwellservervpcD95E1B08"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "cdk-cromwell/cromwell_server_security_group/Resource"
+      }
+    },
+    "cromwellserviceServiceBF150226": {
+      "Type": "AWS::ECS::Service",
+      "Properties": {
+        "TaskDefinition": {
+          "Ref": "cromwellservertask70530790"
+        },
+        "Cluster": {
+          "Ref": "cromwellcluster7BEB3E93"
+        },
+        "DeploymentConfiguration": {
+          "MaximumPercent": 200,
+          "MinimumHealthyPercent": 50
+        },
+        "DesiredCount": 1,
+        "EnableECSManagedTags": false,
+        "LaunchType": "FARGATE",
+        "NetworkConfiguration": {
+          "AwsvpcConfiguration": {
+            "AssignPublicIp": "ENABLED",
+            "SecurityGroups": [
+              {
+                "Fn::GetAtt": [
+                  "cromwellserversecuritygroupEB12F411",
+                  "GroupId"
+                ]
+              }
+            ],
+            "Subnets": [
+              {
+                "Ref": "cromwellservervpcPublicSubnet1SubnetB5F44586"
+              },
+              {
+                "Ref": "cromwellservervpcPublicSubnet2Subnet1754E9FE"
+              }
+            ]
+          }
+        },
+        "ServiceName": "cromwell_server_service"
+      },
+      "Metadata": {
+        "aws:cdk:path": "cdk-cromwell/cromwell_service/Service"
+      }
+    }
+  },
+  "Outputs": {
+    "FargateCromwellServiceArn": {
+      "Value": {
+        "Ref": "cromwellserviceServiceBF150226"
+      }
+    }
+  }
+}

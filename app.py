@@ -7,5 +7,4 @@ from cdk_cromwell.cdk_cromwell_stack import CdkCromwellStack
 
 app = core.App()
 CdkCromwellStack(app, "cdk-cromwell")
-
 app.synth()

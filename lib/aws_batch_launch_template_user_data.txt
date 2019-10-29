@@ -1,0 +1,30 @@
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="==MYBOUNDARY=="
+
+--==MYBOUNDARY==
+Content-Type: text/cloud-config; charset="us-ascii"
+
+packages:
+- amazon-efs-utils
+- jq
+- btrfs-progs
+- python27-pip
+- sed
+- wget
+
+runcmd:
+- file_system_id_01=fs-955579ac
+- efs_directory=/mnt/efs
+
+- mkdir -p ${efs_directory}
+- echo "${file_system_id_01}:/ ${efs_directory} efs tls,_netdev" >> /etc/fstab
+- mount -a -t efs defaults
+- pip install -U awscli boto3
+- scratchPath="/cromwell_root"
+- artifactRootUrl="https://aws-genomics-workflows.s3.amazonaws.com/artifacts"
+- cd /opt && wget $artifactRootUrl/aws-ebs-autoscale.tgz && tar -xzf aws-ebs-autoscale.tgz
+- sh /opt/ebs-autoscale/bin/init-ebs-autoscale.sh $scratchPath /dev/sdc  2>&1 > /var/log/init-ebs-autoscale.log
+- cd /opt && wget $artifactRootUrl/aws-ecs-additions.tgz && tar -xzf aws-ecs-additions.tgz
+- sh /opt/ecs-additions/ecs-additions-cromwell.sh
+
+--==MYBOUNDARY==--

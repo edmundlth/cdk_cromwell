@@ -1,0 +1,731 @@
+{
+  "version": "1.10.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "cdk-cromwell": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "cdk-cromwell.template.json"
+      },
+      "metadata": {
+        "/cdk-cromwell/cromwell_server_vpc/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "cromwellservervpcD95E1B08",
+            "trace": [
+              "new Vpc (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:230:25)",
+              "obj._wrapSandboxCode (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:49)",
+              "Kernel._wrapSandboxCode (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7444:20)",
+              "Kernel._create (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:26)",
+              "Kernel.create (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6746:21)",
+              "KernelHost.processRequest (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6521:28)",
+              "KernelHost.run (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6464:14)",
+              "Immediate.setImmediate [as _onImmediate] (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6467:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/cdk-cromwell/cromwell_server_vpc/PublicSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "cromwellservervpcPublicSubnet1SubnetB5F44586",
+            "trace": [
+              "new Subnet (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:521:24)",
+              "new PublicSubnet (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:615:9)",
+              "availabilityZones.forEach (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:450:42)",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:434:32)",
+              "Vpc.createSubnets (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:430:18)",
+              "new Vpc (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:248:14)",
+              "obj._wrapSandboxCode (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:49)",
+              "Kernel._wrapSandboxCode (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7444:20)",
+              "Kernel._create (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:26)",
+              "Kernel.create (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6746:21)",
+              "KernelHost.processRequest (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6521:28)",
+              "KernelHost.run (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6464:14)",
+              "Immediate.setImmediate [as _onImmediate] (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6467:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/cdk-cromwell/cromwell_server_vpc/PublicSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "cromwellservervpcPublicSubnet1RouteTable07BAC3C6",
+            "trace": [
+              "new Subnet (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:536:23)",
+              "new PublicSubnet (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:615:9)",
+              "availabilityZones.forEach (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:450:42)",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:434:32)",
+              "Vpc.createSubnets (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:430:18)",
+              "new Vpc (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:248:14)",
+              "obj._wrapSandboxCode (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:49)",
+              "Kernel._wrapSandboxCode (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7444:20)",
+              "Kernel._create (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:26)",
+              "Kernel.create (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6746:21)",
+              "KernelHost.processRequest (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6521:28)",
+              "KernelHost.run (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6464:14)",
+              "Immediate.setImmediate [as _onImmediate] (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6467:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/cdk-cromwell/cromwell_server_vpc/PublicSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "cromwellservervpcPublicSubnet1RouteTableAssociation32D10C84",
+            "trace": [
+              "new Subnet (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:541:9)",
+              "new PublicSubnet (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:615:9)",
+              "availabilityZones.forEach (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:450:42)",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:434:32)",
+              "Vpc.createSubnets (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:430:18)",
+              "new Vpc (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:248:14)",
+              "obj._wrapSandboxCode (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:49)",
+              "Kernel._wrapSandboxCode (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7444:20)",
+              "Kernel._create (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:26)",
+              "Kernel.create (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6746:21)",
+              "KernelHost.processRequest (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6521:28)",
+              "KernelHost.run (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6464:14)",
+              "Immediate.setImmediate [as _onImmediate] (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6467:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/cdk-cromwell/cromwell_server_vpc/PublicSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "cromwellservervpcPublicSubnet1DefaultRoute3CAA7A68",
+            "trace": [
+              "PublicSubnet.addDefaultInternetRoute (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:561:23)",
+              "Vpc.publicSubnets.forEach.publicSubnet (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:259:30)",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:258:32)",
+              "obj._wrapSandboxCode (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:49)",
+              "Kernel._wrapSandboxCode (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7444:20)",
+              "Kernel._create (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:26)",
+              "Kernel.create (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6746:21)",
+              "KernelHost.processRequest (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6521:28)",
+              "KernelHost.run (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6464:14)",
+              "Immediate.setImmediate [as _onImmediate] (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6467:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/cdk-cromwell/cromwell_server_vpc/PublicSubnet1/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "cromwellservervpcPublicSubnet1EIP77E570A1",
+            "trace": [
+              "PublicSubnet.addNatGateway (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:626:27)",
+              "Vpc.createNatGateways (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:409:33)",
+              "new Vpc (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:262:18)",
+              "obj._wrapSandboxCode (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:49)",
+              "Kernel._wrapSandboxCode (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7444:20)",
+              "Kernel._create (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:26)",
+              "Kernel.create (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6746:21)",
+              "KernelHost.processRequest (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6521:28)",
+              "KernelHost.run (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6464:14)",
+              "Immediate.setImmediate [as _onImmediate] (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6467:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/cdk-cromwell/cromwell_server_vpc/PublicSubnet1/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "cromwellservervpcPublicSubnet1NATGateway7AB64563",
+            "trace": [
+              "PublicSubnet.addNatGateway (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:624:21)",
+              "Vpc.createNatGateways (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:409:33)",
+              "new Vpc (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:262:18)",
+              "obj._wrapSandboxCode (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:49)",
+              "Kernel._wrapSandboxCode (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7444:20)",
+              "Kernel._create (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:26)",
+              "Kernel.create (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6746:21)",
+              "KernelHost.processRequest (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6521:28)",
+              "KernelHost.run (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6464:14)",
+              "Immediate.setImmediate [as _onImmediate] (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6467:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/cdk-cromwell/cromwell_server_vpc/PublicSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "cromwellservervpcPublicSubnet2Subnet1754E9FE",
+            "trace": [
+              "new Subnet (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:521:24)",
+              "new PublicSubnet (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:615:9)",
+              "availabilityZones.forEach (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:450:42)",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:434:32)",
+              "Vpc.createSubnets (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:430:18)",
+              "new Vpc (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:248:14)",
+              "obj._wrapSandboxCode (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:49)",
+              "Kernel._wrapSandboxCode (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7444:20)",
+              "Kernel._create (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:26)",
+              "Kernel.create (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6746:21)",
+              "KernelHost.processRequest (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6521:28)",
+              "KernelHost.run (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6464:14)",
+              "Immediate.setImmediate [as _onImmediate] (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6467:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/cdk-cromwell/cromwell_server_vpc/PublicSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "cromwellservervpcPublicSubnet2RouteTable80838D64",
+            "trace": [
+              "new Subnet (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:536:23)",
+              "new PublicSubnet (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:615:9)",
+              "availabilityZones.forEach (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:450:42)",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:434:32)",
+              "Vpc.createSubnets (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:430:18)",
+              "new Vpc (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:248:14)",
+              "obj._wrapSandboxCode (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:49)",
+              "Kernel._wrapSandboxCode (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7444:20)",
+              "Kernel._create (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:26)",
+              "Kernel.create (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6746:21)",
+              "KernelHost.processRequest (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6521:28)",
+              "KernelHost.run (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6464:14)",
+              "Immediate.setImmediate [as _onImmediate] (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6467:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/cdk-cromwell/cromwell_server_vpc/PublicSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "cromwellservervpcPublicSubnet2RouteTableAssociationF381AC33",
+            "trace": [
+              "new Subnet (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:541:9)",
+              "new PublicSubnet (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:615:9)",
+              "availabilityZones.forEach (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:450:42)",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:434:32)",
+              "Vpc.createSubnets (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:430:18)",
+              "new Vpc (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:248:14)",
+              "obj._wrapSandboxCode (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:49)",
+              "Kernel._wrapSandboxCode (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7444:20)",
+              "Kernel._create (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:26)",
+              "Kernel.create (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6746:21)",
+              "KernelHost.processRequest (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6521:28)",
+              "KernelHost.run (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6464:14)",
+              "Immediate.setImmediate [as _onImmediate] (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6467:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/cdk-cromwell/cromwell_server_vpc/PublicSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "cromwellservervpcPublicSubnet2DefaultRoute23060B8C",
+            "trace": [
+              "PublicSubnet.addDefaultInternetRoute (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:561:23)",
+              "Vpc.publicSubnets.forEach.publicSubnet (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:259:30)",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:258:32)",
+              "obj._wrapSandboxCode (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:49)",
+              "Kernel._wrapSandboxCode (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7444:20)",
+              "Kernel._create (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:26)",
+              "Kernel.create (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6746:21)",
+              "KernelHost.processRequest (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6521:28)",
+              "KernelHost.run (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6464:14)",
+              "Immediate.setImmediate [as _onImmediate] (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6467:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/cdk-cromwell/cromwell_server_vpc/PublicSubnet2/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "cromwellservervpcPublicSubnet2EIP81EA90D4",
+            "trace": [
+              "PublicSubnet.addNatGateway (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:626:27)",
+              "Vpc.createNatGateways (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:409:33)",
+              "new Vpc (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:262:18)",
+              "obj._wrapSandboxCode (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:49)",
+              "Kernel._wrapSandboxCode (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7444:20)",
+              "Kernel._create (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:26)",
+              "Kernel.create (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6746:21)",
+              "KernelHost.processRequest (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6521:28)",
+              "KernelHost.run (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6464:14)",
+              "Immediate.setImmediate [as _onImmediate] (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6467:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/cdk-cromwell/cromwell_server_vpc/PublicSubnet2/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "cromwellservervpcPublicSubnet2NATGatewayCC02E8DA",
+            "trace": [
+              "PublicSubnet.addNatGateway (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:624:21)",
+              "Vpc.createNatGateways (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:409:33)",
+              "new Vpc (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:262:18)",
+              "obj._wrapSandboxCode (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:49)",
+              "Kernel._wrapSandboxCode (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7444:20)",
+              "Kernel._create (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:26)",
+              "Kernel.create (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6746:21)",
+              "KernelHost.processRequest (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6521:28)",
+              "KernelHost.run (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6464:14)",
+              "Immediate.setImmediate [as _onImmediate] (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6467:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/cdk-cromwell/cromwell_server_vpc/PrivateSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "cromwellservervpcPrivateSubnet1Subnet585632A1",
+            "trace": [
+              "new Subnet (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:521:24)",
+              "new PrivateSubnet (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:642:9)",
+              "availabilityZones.forEach (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:455:43)",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:434:32)",
+              "Vpc.createSubnets (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:430:18)",
+              "new Vpc (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:248:14)",
+              "obj._wrapSandboxCode (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:49)",
+              "Kernel._wrapSandboxCode (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7444:20)",
+              "Kernel._create (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:26)",
+              "Kernel.create (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6746:21)",
+              "KernelHost.processRequest (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6521:28)",
+              "KernelHost.run (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6464:14)",
+              "Immediate.setImmediate [as _onImmediate] (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6467:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/cdk-cromwell/cromwell_server_vpc/PrivateSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "cromwellservervpcPrivateSubnet1RouteTableB1FD8D15",
+            "trace": [
+              "new Subnet (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:536:23)",
+              "new PrivateSubnet (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:642:9)",
+              "availabilityZones.forEach (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:455:43)",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:434:32)",
+              "Vpc.createSubnets (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:430:18)",
+              "new Vpc (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:248:14)",
+              "obj._wrapSandboxCode (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:49)",
+              "Kernel._wrapSandboxCode (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7444:20)",
+              "Kernel._create (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:26)",
+              "Kernel.create (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6746:21)",
+              "KernelHost.processRequest (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6521:28)",
+              "KernelHost.run (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6464:14)",
+              "Immediate.setImmediate [as _onImmediate] (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6467:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/cdk-cromwell/cromwell_server_vpc/PrivateSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "cromwellservervpcPrivateSubnet1RouteTableAssociation35CBD007",
+            "trace": [
+              "new Subnet (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:541:9)",
+              "new PrivateSubnet (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:642:9)",
+              "availabilityZones.forEach (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:455:43)",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:434:32)",
+              "Vpc.createSubnets (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:430:18)",
+              "new Vpc (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:248:14)",
+              "obj._wrapSandboxCode (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:49)",
+              "Kernel._wrapSandboxCode (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7444:20)",
+              "Kernel._create (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:26)",
+              "Kernel.create (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6746:21)",
+              "KernelHost.processRequest (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6521:28)",
+              "KernelHost.run (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6464:14)",
+              "Immediate.setImmediate [as _onImmediate] (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6467:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/cdk-cromwell/cromwell_server_vpc/PrivateSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "cromwellservervpcPrivateSubnet1DefaultRoute8F9B83C9",
+            "trace": [
+              "PrivateSubnet.addDefaultNatRoute (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:589:23)",
+              "Vpc.privateSubnets.forEach (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:270:31)",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:263:33)",
+              "obj._wrapSandboxCode (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:49)",
+              "Kernel._wrapSandboxCode (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7444:20)",
+              "Kernel._create (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:26)",
+              "Kernel.create (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6746:21)",
+              "KernelHost.processRequest (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6521:28)",
+              "KernelHost.run (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6464:14)",
+              "Immediate.setImmediate [as _onImmediate] (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6467:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/cdk-cromwell/cromwell_server_vpc/PrivateSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "cromwellservervpcPrivateSubnet2SubnetC503EED4",
+            "trace": [
+              "new Subnet (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:521:24)",
+              "new PrivateSubnet (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:642:9)",
+              "availabilityZones.forEach (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:455:43)",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:434:32)",
+              "Vpc.createSubnets (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:430:18)",
+              "new Vpc (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:248:14)",
+              "obj._wrapSandboxCode (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:49)",
+              "Kernel._wrapSandboxCode (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7444:20)",
+              "Kernel._create (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:26)",
+              "Kernel.create (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6746:21)",
+              "KernelHost.processRequest (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6521:28)",
+              "KernelHost.run (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6464:14)",
+              "Immediate.setImmediate [as _onImmediate] (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6467:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/cdk-cromwell/cromwell_server_vpc/PrivateSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "cromwellservervpcPrivateSubnet2RouteTable3A80AF85",
+            "trace": [
+              "new Subnet (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:536:23)",
+              "new PrivateSubnet (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:642:9)",
+              "availabilityZones.forEach (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:455:43)",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:434:32)",
+              "Vpc.createSubnets (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:430:18)",
+              "new Vpc (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:248:14)",
+              "obj._wrapSandboxCode (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:49)",
+              "Kernel._wrapSandboxCode (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7444:20)",
+              "Kernel._create (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:26)",
+              "Kernel.create (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6746:21)",
+              "KernelHost.processRequest (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6521:28)",
+              "KernelHost.run (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6464:14)",
+              "Immediate.setImmediate [as _onImmediate] (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6467:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/cdk-cromwell/cromwell_server_vpc/PrivateSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "cromwellservervpcPrivateSubnet2RouteTableAssociation0DC4624C",
+            "trace": [
+              "new Subnet (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:541:9)",
+              "new PrivateSubnet (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:642:9)",
+              "availabilityZones.forEach (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:455:43)",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:434:32)",
+              "Vpc.createSubnets (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:430:18)",
+              "new Vpc (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:248:14)",
+              "obj._wrapSandboxCode (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:49)",
+              "Kernel._wrapSandboxCode (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7444:20)",
+              "Kernel._create (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:26)",
+              "Kernel.create (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6746:21)",
+              "KernelHost.processRequest (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6521:28)",
+              "KernelHost.run (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6464:14)",
+              "Immediate.setImmediate [as _onImmediate] (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6467:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/cdk-cromwell/cromwell_server_vpc/PrivateSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "cromwellservervpcPrivateSubnet2DefaultRoute1B3E3CAB",
+            "trace": [
+              "PrivateSubnet.addDefaultNatRoute (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:589:23)",
+              "Vpc.privateSubnets.forEach (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:270:31)",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:263:33)",
+              "obj._wrapSandboxCode (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:49)",
+              "Kernel._wrapSandboxCode (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7444:20)",
+              "Kernel._create (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:26)",
+              "Kernel.create (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6746:21)",
+              "KernelHost.processRequest (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6521:28)",
+              "KernelHost.run (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6464:14)",
+              "Immediate.setImmediate [as _onImmediate] (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6467:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/cdk-cromwell/cromwell_server_vpc/IGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "cromwellservervpcIGWEA8D5F35",
+            "trace": [
+              "new Vpc (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:252:25)",
+              "obj._wrapSandboxCode (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:49)",
+              "Kernel._wrapSandboxCode (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7444:20)",
+              "Kernel._create (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:26)",
+              "Kernel.create (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6746:21)",
+              "KernelHost.processRequest (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6521:28)",
+              "KernelHost.run (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6464:14)",
+              "Immediate.setImmediate [as _onImmediate] (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6467:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/cdk-cromwell/cromwell_server_vpc/VPCGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "cromwellservervpcVPCGWE2F50815",
+            "trace": [
+              "new Vpc (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:254:25)",
+              "obj._wrapSandboxCode (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:49)",
+              "Kernel._wrapSandboxCode (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7444:20)",
+              "Kernel._create (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:26)",
+              "Kernel.create (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6746:21)",
+              "KernelHost.processRequest (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6521:28)",
+              "KernelHost.run (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6464:14)",
+              "Immediate.setImmediate [as _onImmediate] (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6467:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/cdk-cromwell/cromwell_cluster/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "cromwellcluster7BEB3E93",
+            "trace": [
+              "new Cluster (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ecs/lib/cluster.js:31:25)",
+              "obj._wrapSandboxCode (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:49)",
+              "Kernel._wrapSandboxCode (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7444:20)",
+              "Kernel._create (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:26)",
+              "Kernel.create (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6746:21)",
+              "KernelHost.processRequest (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6521:28)",
+              "KernelHost.run (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6464:14)",
+              "Immediate.setImmediate [as _onImmediate] (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6467:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/cdk-cromwell/ecstaskexecutionrole/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ecstaskexecutionrolePolicy284E5D79",
+            "trace": [
+              "new Policy (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-iam/lib/policy.js:29:26)",
+              "MutableImport.addToPolicy (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-iam/lib/role.js:115:42)",
+              "Function.addToPrincipal (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-iam/lib/grant.js:54:65)",
+              "Function.addToPrincipalOrResource (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-iam/lib/grant.js:31:30)",
+              "Import.grant (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ecr/lib/repository.js:82:26)",
+              "Import.grantPull (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ecr/lib/repository.js:94:26)",
+              "EcrImage.bind (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ecs/lib/images/ecr.js:18:25)",
+              "new ContainerDefinition (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ecs/lib/container-definition.js:76:40)",
+              "obj._wrapSandboxCode (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:49)",
+              "Kernel._wrapSandboxCode (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7444:20)",
+              "Kernel._create (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:26)",
+              "Kernel.create (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6746:21)",
+              "KernelHost.processRequest (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6521:28)",
+              "KernelHost.run (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6464:14)",
+              "Immediate.setImmediate [as _onImmediate] (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6467:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/cdk-cromwell/cromwell_server_task/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "cromwellservertask70530790",
+            "trace": [
+              "new TaskDefinition (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ecs/lib/base/task-definition.js:63:25)",
+              "obj._wrapSandboxCode (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:49)",
+              "Kernel._wrapSandboxCode (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7444:20)",
+              "Kernel._create (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:26)",
+              "Kernel.create (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6746:21)",
+              "KernelHost.processRequest (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6521:28)",
+              "KernelHost.run (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6464:14)",
+              "Immediate.setImmediate [as _onImmediate] (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6467:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/cdk-cromwell/cromwell_container/LogGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "cromwellcontainerLogGroup6DE00919",
+            "trace": [
+              "new LogGroup (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-logs/lib/log-group.js:182:26)",
+              "AwsLogDriver.bind (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ecs/lib/log-drivers/aws-log-driver.js:27:48)",
+              "new ContainerDefinition (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ecs/lib/container-definition.js:78:50)",
+              "obj._wrapSandboxCode (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:49)",
+              "Kernel._wrapSandboxCode (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7444:20)",
+              "Kernel._create (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:26)",
+              "Kernel.create (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6746:21)",
+              "KernelHost.processRequest (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6521:28)",
+              "KernelHost.run (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6464:14)",
+              "Immediate.setImmediate [as _onImmediate] (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6467:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/cdk-cromwell/cromwell_server_security_group/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "cromwellserversecuritygroupEB12F411",
+            "trace": [
+              "new SecurityGroup (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ec2/lib/security-group.js:131:30)",
+              "obj._wrapSandboxCode (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:49)",
+              "Kernel._wrapSandboxCode (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7444:20)",
+              "Kernel._create (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:26)",
+              "Kernel.create (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6746:21)",
+              "KernelHost.processRequest (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6521:28)",
+              "KernelHost.run (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6464:14)",
+              "Immediate.setImmediate [as _onImmediate] (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6467:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/cdk-cromwell/cromwell_service/Service": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "cromwellserviceServiceBF150226",
+            "trace": [
+              "new BaseService (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ecs/lib/base/base-service.js:98:25)",
+              "new FargateService (/private/var/folders/l_/wh7_j34s05v4ddcbcq7c29k00000gn/T/jsii-kernel-1BOKtT/node_modules/@aws-cdk/aws-ecs/lib/fargate/fargate-service.js:35:9)",
+              "obj._wrapSandboxCode (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:49)",
+              "Kernel._wrapSandboxCode (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7444:20)",
+              "Kernel._create (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:26)",
+              "Kernel.create (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6746:21)",
+              "KernelHost.processRequest (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6521:28)",
+              "KernelHost.run (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6464:14)",
+              "Immediate.setImmediate [as _onImmediate] (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6467:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ],
+        "/cdk-cromwell/FargateCromwellServiceArn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FargateCromwellServiceArn",
+            "trace": [
+              "obj._wrapSandboxCode (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:49)",
+              "Kernel._wrapSandboxCode (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:7444:20)",
+              "Kernel._create (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6992:26)",
+              "Kernel.create (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6746:21)",
+              "KernelHost.processRequest (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6521:28)",
+              "KernelHost.run (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6464:14)",
+              "Immediate.setImmediate [as _onImmediate] (/Users/admin/Desktop/MGHA_bioinformatics/PROJECT_qc_pipeline/git_repo/cdk-cromwell/.env/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:6467:37)",
+              "runCallback (timers.js:705:18)",
+              "tryOnImmediate (timers.js:676:5)",
+              "processImmediate (timers.js:658:5)"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "runtime": {
+    "libraries": {
+      "@aws-cdk/cx-api": "1.13.1",
+      "@aws-cdk/core": "1.13.1",
+      "@aws-cdk/region-info": "1.13.1",
+      "@aws-cdk/aws-iam": "1.13.1",
+      "@aws-cdk/aws-cloudwatch": "1.13.1",
+      "@aws-cdk/aws-ssm": "1.13.1",
+      "@aws-cdk/aws-ec2": "1.13.1",
+      "@aws-cdk/aws-autoscaling-common": "1.13.1",
+      "@aws-cdk/aws-applicationautoscaling": "1.13.1",
+      "@aws-cdk/aws-elasticloadbalancing": "1.13.1",
+      "@aws-cdk/aws-events": "1.13.1",
+      "@aws-cdk/aws-logs": "1.13.1",
+      "@aws-cdk/aws-kms": "1.13.1",
+      "@aws-cdk/aws-s3": "1.13.1",
+      "@aws-cdk/assets": "1.13.1",
+      "@aws-cdk/aws-s3-assets": "1.13.1",
+      "@aws-cdk/aws-sqs": "1.13.1",
+      "@aws-cdk/aws-lambda": "1.13.1",
+      "@aws-cdk/aws-sns": "1.13.1",
+      "@aws-cdk/aws-cloudformation": "1.13.1",
+      "@aws-cdk/aws-route53": "1.13.1",
+      "@aws-cdk/aws-certificatemanager": "1.13.1",
+      "@aws-cdk/aws-elasticloadbalancingv2": "1.13.1",
+      "@aws-cdk/aws-autoscaling": "1.13.1",
+      "@aws-cdk/aws-sns-subscriptions": "1.13.1",
+      "@aws-cdk/aws-autoscaling-hooktargets": "1.13.1",
+      "@aws-cdk/aws-ecr": "1.13.1",
+      "@aws-cdk/aws-ecr-assets": "1.13.1",
+      "@aws-cdk/aws-apigateway": "1.13.1",
+      "@aws-cdk/aws-cloudfront": "1.13.1",
+      "@aws-cdk/aws-route53-targets": "1.13.1",
+      "@aws-cdk/aws-secretsmanager": "1.13.1",
+      "@aws-cdk/aws-servicediscovery": "1.13.1",
+      "@aws-cdk/aws-ecs": "1.13.1",
+      "@aws-cdk/aws-batch": "1.13.1",
+      "jsii-runtime": "Python/3.7.3"
+    }
+  }
+}
